@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const markdown = require('ReadMe Generator Code/utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -50,8 +51,13 @@ const questions = [
     },
     {
         type: "input",
-        name: "questions",
-        message: "Please enter your GitHub unsername",
+        name: "username",
+        message: "Please enter your GitHub username.",
+    },
+    {
+        type: "input",
+        name: "url",
+        message: "Please enter the GitHub url for this project.",
     },
     {
         type: "input",
@@ -62,7 +68,13 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+async function writeToFile(fileName, data) {
+    writeFileAsync(fileName, data).then(function () {
+        console.log('ReadMe created.');
+    }).catch(err => {
+        console.log('err', err);
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {}
