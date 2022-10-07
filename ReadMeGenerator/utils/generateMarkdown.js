@@ -51,8 +51,7 @@ function generateMarkdown(data) {
 
   Github: [${data.username}](${data.url})
 
-  Copyright ${data.name}. All rights reserved.
-
+  Demonstration: [See it here.](${data.video})
 `;
 }
 

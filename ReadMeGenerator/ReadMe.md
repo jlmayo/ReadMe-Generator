@@ -4,7 +4,7 @@
   
   ## Description
 
-  This application utilizes node.JS to create a ReadMe file from the command line.
+  This application generates a standard ReadMe file.
 
   ## Table of Contents
 
@@ -18,11 +18,11 @@
 
   ### Installation
 
-  Run npm i and then node index from the command line from an integrated terminal within your project's directory. Answer the prompts. A new ReadMe file will then be created within the directory, or an existing ReadMe file will be overwritten.
+  Run nmp i and then node index from the command line of an integrated terminal within the project's directory. Answer the prompts. ReadMe file will be created in the directory, or an existing ReadMe file will be overwritten.
 
   ### Usage
 
-  It will be utilized by developers who want to created standard, quality ReadMe files for their projects.
+  It will be utilized by developers to create standard ReadMe files for their projects.
 
   ### License
   MIT
@@ -41,5 +41,4 @@
 
   Github: [jlmayo](https://github.com/jlmayo/ReadMe-Generator)
 
-  Copyright undefined. All rights reserved.
-
+  Demonstration: [See it here.](https://drive.google.com/file/d/1nKiZ6haCYLyDAazvO89hmEwTsxiGf3yl/view?usp=sharing)

@@ -66,6 +66,11 @@ const questions = [
         name: "email",
         message: "Please enter your email address.",
     },
+    {
+        type: "input",
+        name: "video",
+        message: "Please include the url for application walkthrough.",
+    }
 ];
 
 const promptUser = () => {
