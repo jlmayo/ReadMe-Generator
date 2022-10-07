@@ -74,11 +74,13 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
+//Will either create or overwrite an existing ReadMe
 const writeToFile = (fileName, data) => {
     return writeFileAsync(fileName, data);
 };
 
 // TODO: Create a function to initialize app
+//Used await/async to include prompt answers in writeToFile creation or override
 const init = async () => {
     try {
         console.log('Please answer these questions to create a ReadMe file.');

@@ -4,7 +4,8 @@ const licenseLinks = require("./licenseLinks");
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  //Creates section for and populates license badge
+  //Creates section for and populates license badge and the rest of the ReadMe markdown follows.
+  //Utilized template literal notation to insert data from prompt answers.
   data.licenseBadge = licenseLinks[data.license];
   
   return `# ${data.title}
