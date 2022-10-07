@@ -1,10 +1,12 @@
-const renderLicenseLink = require("./licenseLinks.js.js");
+const licenseLinks = require("./licenseLinks");
 
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  data.licenseBadge = renderLicenseLink[data.license];
+  //Creates section for and populates license badge
+  data.licenseBadge = licenseLinks[data.license];
+  
   return `# ${data.title}
 
   ${data.licenseBadge}
@@ -14,34 +16,37 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * [Installation] (#installation)
-  * [Usage] (#usage)
+
+  * [Installation](#installation)
+  * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
   * [Credits](#credits)
 
-  # Installation
+  ### Installation
+
   ${data.installation}
 
-  # Usage
+  ### Usage
+
   ${data.usage}
 
-  # License
+  ### License
   ${data.license}
 
-  # Contributing
+  ### Contributing
   ${data.contributions}
 
-  # Tests
+  ### Tests
   ${data.testing}
 
-  # Questions
+  ### Questions
    
   Questions? Contact me: ${data.email}.
 
-  # Credits
+  ### Credits
 
   Github: [${data.username}](${data.url})
 

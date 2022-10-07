@@ -1,10 +1,9 @@
 // TODO: Include packages needed for this application
-const { createDecipheriv } = require('crypto');
 const fs = require('fs');
 const inquirer = require('inquirer');
-const utils = require('utils');
-const markdown = require('./generateMarkdown');
-const writeFileAsync = utils.promisify(fs.writeFile);
+const util = require('util');
+const markdown = require('./utils/generateMarkdown');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -44,9 +43,10 @@ const questions = [
         message: "Please select the license used for this project.",
         choices: [
             "MIT",
-            "Ulicense",
+            "Perl",
+            "Eclipse Public License 1.0",
             "Apache 2.0",
-            "GNU v3",
+            "GNU GPL v3",
             "BSD 3-clause",
             "Mozilla Public License 2.0",
         ]
@@ -74,7 +74,7 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-const writeToFile(fileName, data) => {
+const writeToFile = (fileName, data) => {
     return writeFileAsync(fileName, data);
 };
 
@@ -85,9 +85,9 @@ const init = async () => {
 
         const answers = await promptUser();
 
-        const fileContent = markdown(answers);
+        const readMeContent = markdown(answers);
 
-        await writeToFile('./ReadMe.md', fileContent);
+        await writeToFile('./ReadMe.md', readMeContent);
 
         console.log('Success! ReadMe created.');
 
