@@ -18,7 +18,7 @@
 
   ### Installation
 
-  Run nmp i and then node index from the command line of an integrated terminal within the project's directory. Answer the prompts. ReadMe file will be created in the directory, or an existing ReadMe file will be overwritten.
+  Run npm i and then node index from the command line of an integrated terminal within the project's directory. Answer the prompts. ReadMe file will be created in the directory, or an existing ReadMe file will be overwritten.
 
   ### Usage
 
